@@ -1,0 +1,23 @@
+.news {
+    background-color: #fffffff3;
+    width: 10rem;
+    height: 10rem;
+    border-radius: 5px;
+    padding: 4px;
+    border: 1px solid blue;
+}
+
+.newsimage {
+    background-color: black;
+    width: 5rem;
+    height: 5rem;
+}
+
+.newsdetails {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    font-size: 12px;
+    margin-top: 5px;
+}
+

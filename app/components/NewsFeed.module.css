@@ -1,0 +1,29 @@
+.newscontainer {
+    padding: 5rem 4rem 2rem 10rem;
+  }
+  
+  
+  .newsarea {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    margin-top: 2rem;
+  }
+  
+  
+  .newsstories {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    row-gap: 4px;
+  }
+
+  .sidestories {
+    display: grid;
+    row-gap: 4px;
+  }
+  
+  
+  @media (max-width: 500px) {
+    .newsarea {
+      grid-template-columns: 1fr;
+    }
+  }

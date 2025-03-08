@@ -1,0 +1,55 @@
+.sidenavopen {
+    height: 100vh;
+    width: 35vw;
+    background-color: #d9d9d9;
+    display: grid;
+    place-content: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.sidenavclosed {
+    height: 100vh;
+    width: 10vw;
+    background-color: #d9d9d9;
+    display: grid;
+    place-content: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.sidenavclosed .sidenavgrid {
+    display: none
+}
+
+.sidenavbuttonopen {
+    position: relative;
+    bottom: 15rem;
+    left: 2rem;
+    opacity: 70%;
+}
+
+.sidenavbuttonclose {
+    position: relative;
+    bottom: 11rem;
+    left: 12rem;
+    opacity: 70%;
+}
+
+.sidenavgrid {
+    display: grid;
+    gap: 10px;
+    font-size: 32px;
+    letter-spacing: 0%;
+  
+}
+
+.sidenavgrid div {
+    border-top: 1px solid #0000003d;
+}
+
+.sidenavgrid:last-child {
+    border-bottom: 1px  solid #0000003d;
+}

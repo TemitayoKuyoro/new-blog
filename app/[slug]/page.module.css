@@ -1,0 +1,9 @@
+.image{
+    border-radius: 2px;
+    opacity: 90%;
+}
+
+.newsarea {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+}

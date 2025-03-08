@@ -1,0 +1,17 @@
+.nav {
+    display: flex;
+    gap: 1rem;
+    justify-content: space-around;
+    
+}
+
+.nav button {
+    border: none;
+    background-color: #ffffffe3;
+    cursor: pointer;
+}
+
+.nav span {
+    font-size: 12px;
+    font-weight: 500;
+}
