@@ -1,9 +1,10 @@
 .news {
     background-color: #fffffff3;
-    width: 10rem;
-    height: 10rem;
+    width: 13.5rem;
+    height: 9.5rem;
     border-radius: 5px;
     padding: 4px;
+    box-shadow: 1px 1px 8px 1px rgba(0, 0, 0, .60);
 }
 
 .newsimage {
@@ -18,5 +19,8 @@
     gap: 2px;
     font-size: 12px;
     margin-top: 5px;
+    font-weight: 600;
+    letter-spacing: -0.2px;
+    line-height: 1.1;
 }
 

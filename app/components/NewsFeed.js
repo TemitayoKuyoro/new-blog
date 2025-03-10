@@ -28,15 +28,18 @@ export default function NewsFeed({ posts }) {
     console.log(latestPosts);
 
     const presentDate = Date.now();
+
+    const activePosts = posts.filter((p) => p.category.includes(categoryIsActive))
+    
     return (
-        <div>
+        <div className={styles.container}>
             <MainNav onCategoryChange={setCategoryIsActive} />
             <SideNav />
             <div className={styles.newscontainer}>
                 <LatestStory />
                 <div className={styles.newsarea}>
                     <div className={styles.newsstories}>
-                        {posts.map((post) =>
+                        {activePosts.map((post) =>
                             <Link href={`/${post.slug}`} key={post.slug}>
                                 <NewsStory source={post.sourceName} title={post.title} time={Math.floor((presentDate - new Date(post.newsTime)) / 3600000)} image={post.newsImage} />
                             </Link>

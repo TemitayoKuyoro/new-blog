@@ -1,24 +1,31 @@
+.container {
+  margin: 10px auto 0 auto;
+  max-width: 80vw;
+}
+
 .newscontainer {
-    padding: 5rem 4rem 2rem 10rem;
+    margin-top: 3rem;
   }
   
   
   .newsarea {
     display: grid;
     grid-template-columns: 3fr 1fr;
-    margin-top: 2rem;
+    margin-top: 5rem;
+    gap: 2em;
   }
   
   
   .newsstories {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
-    row-gap: 4px;
+    grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+    column-gap: 1.5em;
+    row-gap: 1.5em;
   }
 
   .sidestories {
     display: grid;
-    row-gap: 4px;
+    row-gap: 1.5em;
   }
   
   

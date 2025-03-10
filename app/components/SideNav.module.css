@@ -7,10 +7,12 @@
     position: absolute;
     left: 0;
     top: 0;
+    box-shadow: inset -2px 0px 6px -4px rgba(0,0,0, .45);
+    z-index: 1;
 }
 
 .sidenavclosed {
-    height: 100vh;
+    height: 1000vh;
     width: 10vw;
     background-color: #d9d9d9;
     display: grid;
@@ -18,6 +20,8 @@
     position: absolute;
     left: 0;
     top: 0;
+    box-shadow: 1px 0px 4px 1px rgba(0,0,0, .45);
+    z-index: 1;
 }
 
 .sidenavclosed .sidenavgrid {
@@ -26,24 +30,24 @@
 
 .sidenavbuttonopen {
     position: relative;
-    bottom: 15rem;
-    left: 2rem;
+    bottom: 498vh;
+    left: 4vw;
     opacity: 70%;
 }
 
 .sidenavbuttonclose {
     position: relative;
-    bottom: 11rem;
-    left: 12rem;
+    bottom: 44vh;
+    left: 19vw;
     opacity: 70%;
 }
 
 .sidenavgrid {
     display: grid;
     gap: 10px;
-    font-size: 32px;
+    font-size: 2em;
     letter-spacing: 0%;
-  
+    text-wrap: nowrap;
 }
 
 .sidenavgrid div {
@@ -53,3 +57,21 @@
 .sidenavgrid:last-child {
     border-bottom: 1px  solid #0000003d;
 }
+
+@media (max-width: 500px) {
+    .sidenavbuttonopen {
+        bottom: 498vh;
+        left: 2px;
+    }
+    
+    .sidenavbuttonclose {
+        bottom: 43rem;
+        left: 5rem;
+    }
+
+  }
+@media (max-width: 600px) {
+    .sidenavgrid {
+        font-size: 1em;
+    }
+  }

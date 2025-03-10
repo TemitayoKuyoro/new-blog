@@ -1,17 +1,26 @@
 .nav {
     display: flex;
     gap: 1rem;
-    justify-content: space-around;
-    
+    justify-content: space-around;   
 }
 
 .nav button {
     border: none;
     background-color: #ffffffe3;
     cursor: pointer;
+    border-radius: 8px;
+    padding: 2px 4px;
+}
+
+.nav button:hover {
+    border: 1px solid rgba(0,0,0,.90);
+    background-color: #d9d9d9;
 }
 
 .nav span {
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 500;
+    letter-spacing: 0.1px;
+    font-weight: 500;
+    line-height: 1;
 }

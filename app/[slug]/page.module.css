@@ -1,9 +1,28 @@
 .image{
+    width: 30rem;
+    height: 15rem;
     border-radius: 2px;
     opacity: 90%;
 }
 
+.container {
+    margin: 2rem auto 0 auto;
+    max-width: 80vw;
+}
+
 .newsarea {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    grid-template-columns: 3fr 1fr;
+    gap: 1em;
 }
+
+.newsdetails {
+    margin-block: 2em;
+}
+
+@media (max-width: 500px) {
+    .newsarea {
+        grid-template-columns: 1fr;
+    }
+}
+

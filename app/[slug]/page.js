@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import fs from 'fs';
 import matter from 'gray-matter';
 
@@ -20,21 +21,52 @@ export default async function NewsPage({ params }) {
         newsImage: fileContent.data.cover_image,
         sourceName: fileContent.data.source,
         sourceImage: fileContent.data.source_image,
-    }
+        content: fileContent.content
+    };
+
+    const filenames = fs.readdirSync('../new-blog/app/posts')
+
+    const otherFilenames = filenames.filter((file) => file !== slug + '.md');
+
+    const otherFileMatter = otherFilenames.map((filename) => {
+        const otherFile = fs.readFileSync(`../new-blog/app/posts/${filename}`, 'utf-8');
+        const otherFileContent = matter(otherFile)
+        return ({
+            title: otherFileContent.data.title,
+            date: otherFileContent.data.date,
+            newsExcerpt: otherFileContent.data.excerpt,
+            newsTime: otherFileContent.data.newsTime,
+            category: otherFileContent.data.category,
+            newsImage: otherFileContent.data.cover_image,
+            sourceName: otherFileContent.data.source,
+            sourceImage: otherFileContent.data.source_image,
+            slug: filename.replace('.md', '')
+        })
+    })
 
     return (
-        <>
+        <div className={styles.container}>
             <SideNav />
             <div className={styles.newsarea}>
-                <div>
+                <div >
                     <Image className={styles.image} src={frontmatter.newsImage} height={150} width={150} alt={frontmatter.title} />
-                    <h3>{frontmatter.sourceName}</h3>
-                    <h1>{frontmatter.title}</h1>
-                    <h3>{frontmatter.newsTime}</h3>
-                    <p>{frontmatter.newsExcerpt}</p>
+                    <div className={styles.newsdetails}>
+                        <h3>{frontmatter.sourceName}</h3>
+                        <h1>{frontmatter.title}</h1>
+                        <h3>{frontmatter.newsExcerpt}</h3>
+                    </div>
+                    <p className={styles.newscontent}>{frontmatter.content}</p>
                 </div>
-                <SideStory />
+                <div>
+                    {
+                        otherFileMatter.map((file) =>
+                            <Link key={file.slug} href={`/${slug}`}>
+                                <SideStory source={file.sourceName} title={file.title} time={Math.floor((Date.now() - new Date(file.newsTime)) / 3600000)} image={file.newsImage} />
+                            </Link>
+                        )
+                    }
+                </div>
             </div>
-        </>
+        </div>
     )
 }
