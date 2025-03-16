@@ -58,6 +58,11 @@
     border-bottom: 1px  solid #0000003d;
 }
 
+.sidenavgrid div:hover {
+    background-color:#171717; 
+    color: #ffffffe3;;
+}
+
 /* @media (max-width: 500px) {
     .sidenavbuttonopen {
         bottom: 498vh;

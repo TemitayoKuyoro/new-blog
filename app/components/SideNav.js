@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import Image from 'next/image';
 import { useState } from 'react';
 
@@ -18,9 +19,9 @@ export default function SideNav() {
             }
             </div>
             <div className={styles.sidenavgrid}>
-                <div><p>About us</p></div>
-                <div><p>Contact us</p></div>
-                <div><p>Careers</p></div>
+                <Link href='/about'><div><p>About us</p></div></Link>
+               <Link href='/contact'><div><p>Contact us</p></div></Link>
+                <Link href='/career'><div><p>Careers</p></div></Link>
             </div>
         </div>
     )
