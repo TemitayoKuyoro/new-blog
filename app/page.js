@@ -8,7 +8,6 @@ import NewsFeed from './components/NewsFeed';
 export default function Home() {
 
   const filenames = fs.readdirSync('./app/posts')
-  console.log(filenames)
   const files = filenames.map((filename) => {
     const file = fs.readFileSync(`./app/posts/${filename}`, 'utf-8')
     const fileContent = matter(file)
@@ -28,8 +27,6 @@ export default function Home() {
       slug: filename.replace('.md', '')
     })
   })
-  // console.log(files)
-
 
   return (
     <>

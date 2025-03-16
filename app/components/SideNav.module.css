@@ -30,14 +30,14 @@
 
 .sidenavbuttonopen {
     position: relative;
-    bottom: 49vh;
-    left: 4vw;
+    bottom: 49dvh;
+    left: 3vw;
     opacity: 70%;
 }
 
 .sidenavbuttonclose {
     position: relative;
-    bottom: 44vh;
+    bottom: 44dvh;
     left: 19vw;
     opacity: 70%;
 }
@@ -58,7 +58,7 @@
     border-bottom: 1px  solid #0000003d;
 }
 
-@media (max-width: 500px) {
+/* @media (max-width: 500px) {
     .sidenavbuttonopen {
         bottom: 498vh;
         left: 2px;
@@ -69,7 +69,7 @@
         left: 5rem;
     }
 
-  }
+  } */
 @media (max-width: 600px) {
     .sidenavgrid {
         font-size: 1em;
