@@ -46,6 +46,8 @@ export default async function NewsPage({ params }) {
 
     return (
         <div className={styles.container}>
+            <Link href='/'>
+            <button className={styles.back}>Home</button></Link>
             <SideNav />
             <div className={styles.newsarea}>
                 <div >
@@ -60,7 +62,7 @@ export default async function NewsPage({ params }) {
                 <div>
                     {
                         otherFileMatter.map((file) =>
-                            <Link key={file.slug} href={`/${slug}`}>
+                            <Link key={file.slug} href={`/${file.slug}`}>
                                 <SideStory source={file.sourceName} title={file.title} time={Math.floor((Date.now() - new Date(file.newsTime)) / 3600000)} image={file.newsImage} />
                             </Link>
                         )
