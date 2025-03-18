@@ -59,7 +59,7 @@ export default async function NewsPage({ params }) {
                     </div>
                     <p className={styles.newscontent}>{frontmatter.content}</p>
                 </div>
-                <div>
+                <div className={styles.sidestory}>
                     {
                         otherFileMatter.map((file) =>
                             <Link key={file.slug} href={`/${file.slug}`}>

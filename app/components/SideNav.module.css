@@ -37,7 +37,7 @@
 
 .sidenavbuttonclose {
     position: relative;
-    bottom: 46dvh;
+    bottom: 35dvh;
     left: 19vw;
     opacity: 70%;
 }
@@ -63,28 +63,30 @@
     color: #ffffffe3;;
 }
 
-@media (min-width:600px) {
+/* @media (min-width:600px) {
     /* .sidenavbuttonopen {
         bottom: 498vh;
         left: 2px;
     }
-     */
+     
     .sidenavbuttonclose {
         bottom: 44dvh;
     }
 
-  }
-@media (min-width:2550px){
+  } */
+
+ @media (min-width:3500px){
     /* .sidenavbuttonopen {
         bottom: 498vh;
         left: 2px;
-    }
-     */
+    }*/
+     
     .sidenavbuttonclose {
-        bottom: 43dvh;
+        bottom: 40dvh;
     }
 
-  }
+  } 
+
 @media (max-width: 600px) {
     .sidenavgrid {
         font-size: 1em;

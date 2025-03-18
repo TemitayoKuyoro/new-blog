@@ -13,14 +13,24 @@
 .newsarea {
     display: grid;
     grid-template-columns: 3fr 1fr;
-    gap: 1em;
+    gap: 1.5em;
 }
 
 .newsdetails {
     margin-block: 2em;
 }
 
-@media (max-width: 500px) {
+.newscontent {
+    line-height: 1;
+}
+
+.sidestory {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 1.5em;
+}
+
+@media (max-width: 850px) {
     .newsarea {
         grid-template-columns: 1fr;
     }
