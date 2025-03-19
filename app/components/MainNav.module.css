@@ -1,7 +1,8 @@
 .nav {
     display: flex;
     gap: 1rem;
-    justify-content: space-around;   
+    justify-content: space-around;
+    padding: 4px 0;
 }
 
 .nav button {
@@ -9,7 +10,7 @@
     background-color: #ffffffe3;
     cursor: pointer;
     border-radius: 8px;
-    padding: 2px 4px;
+    padding: 2px 4px;   
 }
 
 .nav button:hover {

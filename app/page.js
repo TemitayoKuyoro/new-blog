@@ -1,7 +1,5 @@
 import fs from 'fs';
 import matter from 'gray-matter';
-import Image from "next/image";
-import styles from "./page.module.css";
 
 import NewsFeed from './components/NewsFeed';
 

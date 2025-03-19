@@ -47,7 +47,7 @@ export default async function NewsPage({ params }) {
     return (
         <div className={styles.container}>
             <Link href='/'>
-            <button className={styles.back}>Home</button></Link>
+                <button className={styles.back}>Home</button></Link>
             <SideNav />
             <div className={styles.newsarea}>
                 <div >

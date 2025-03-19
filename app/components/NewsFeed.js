@@ -1,10 +1,12 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Link from 'next/link';
 
-import styles from './NewsFeed.module.css';
+import { timeformat} from '../utils/time-format';
+import { presentDate } from '../utils/current-time';
 import { CATEGORIES_MAP } from '../utils/categories';
+import styles from './NewsFeed.module.css';
 
 import MainNav from './MainNav'
 import SideNav from './SideNav'
@@ -19,19 +21,15 @@ export default function NewsFeed({ posts }) {
     const similarCategories = CATEGORIES_MAP.get(categoryIsActive)
     
     const similarPosts = posts.filter((p) => p.category.filter((c) => similarCategories.includes(c)))
-
-    console.log(similarPosts)
     
     const latestPosts = posts.sort((a, b) => new Date(a.newsTime) - new Date(b.newsTime))
     
-    const presentDate = Date.now();
-
     const activePosts = posts.filter((p) => p.category.includes(categoryIsActive))
 
-    
     return (
         <div className={styles.container}>
-            <MainNav onCategoryChange={setCategoryIsActive}/>
+        <MainNav onCategoryChange={setCategoryIsActive}/>
+        <hr></hr>
             <SideNav />
             <div className={styles.newscontainer}>
                 <LatestStory />
@@ -39,7 +37,7 @@ export default function NewsFeed({ posts }) {
                     <div className={styles.newsstories}>
                         {activePosts.map((post) =>
                             <Link href={`/${post.slug}`} key={post.slug}>
-                                <NewsStory source={post.sourceName} title={post.title} time={Math.floor((presentDate - new Date(post.newsTime)) / 3600000)} image={post.newsImage} />
+                                <NewsStory source={post.sourceName} title={post.title} time={timeformat(Math.floor((presentDate - new Date(post.newsTime)) / 3600000))} image={post.newsImage} />
                             </Link>
                         )}
                     </div>
@@ -47,7 +45,7 @@ export default function NewsFeed({ posts }) {
                         {
                             similarPosts.map((post) =>
                                 <Link href={`/${post.slug}`} key={post.slug}>
-                                    <SideStory source={post.sourceName} title={post.title} time={Math.floor((presentDate - new Date(post.newsTime)) / 3600000)} image={post.newsImage} />
+                                    <SideStory source={post.sourceName} title={post.title} time={timeformat(Math.floor((presentDate - new Date(post.newsTime)) / 3600000))} image={post.newsImage} />
                                 </Link>
                             )
                         }

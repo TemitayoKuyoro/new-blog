@@ -1,5 +1,5 @@
 .container {
-  margin: 10px auto 0 auto;
+  margin: 0 auto 0 auto;
   max-width: 80vw;
 }
 
@@ -15,22 +15,25 @@
     gap: 2em;
   }
   
-  
   .newsstories {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
     column-gap: 1.5em;
     row-gap: 1.5em;
+    border-right: 0.1px solid gray;
   }
 
   .sidestories {
     display: grid;
     row-gap: 1.5em;
   }
-  
+
   
   @media (max-width: 500px) {
     .newsarea {
       grid-template-columns: 1fr;
+    }
+    .newsstories {
+      border: none;
     }
   }

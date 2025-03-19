@@ -9,7 +9,7 @@ export default function SideStory({source, title, time, image}) {
       <div className={styles.newsdetails}>
         <span>{source}</span>
         <span>{title}</span>
-        <span>{`${time}hrs`}</span>
+        <span>{time}</span>
       </div>
     </div>
   )
