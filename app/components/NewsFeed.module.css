@@ -19,21 +19,31 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
     column-gap: 1.5em;
-    row-gap: 1.5em;
+    row-gap: 2.5em;
+    padding-right: 2rem;
     border-right: 0.1px solid gray;
   }
 
   .sidestories {
     display: grid;
     row-gap: 1.5em;
+    padding-left: 2rem;
   }
 
   
-  @media (max-width: 500px) {
+  @media (max-width: 1048px) {
     .newsarea {
       grid-template-columns: 1fr;
+      gap: 3.5em;
     }
     .newsstories {
       border: none;
+      padding-right: 0;
     }
+    .sidestories {
+      padding-left: 0;
+      padding-top: 2rem;
+      border-top: 0.1px solid gray;
+    }
+
   }
